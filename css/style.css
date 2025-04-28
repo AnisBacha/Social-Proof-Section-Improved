@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body{
+    background-color: white;
+    font-family: "League Spartan";
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    padding: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.main__h1{
+    color: hsl(300, 43%, 22%);
+    font-size: 2.375rem;
+    margin-block: 3.5rem 1.625rem;
+}
+.main__description{
+    font-size: 1.125rem;
+    color: hsl(303, 10%, 53%);
+}
+.main__rating-container{
+    margin-block: 3.875rem 4.25rem;
+}
+.main__rated{
+    color: hsl(300, 43%, 22%);
+    font-weight: 700;
+    margin-block-start: .5rem;
+}
+.main__rating-container div{
+    margin-block-end: 3.25rem;
+}
+.main__rating-container div:last-child{
+    margin-block: 0;
+}
+
+.main__testimony{
+    background-color: hsl(300, 43%, 22%);
+    color: white;
+    border-radius: 10px;
+    margin-block-end: 1rem;
+    padding: 2.375rem 1.75rem;
+    text-align: start;
+    max-width: 350px;
+
+}
+.main__testimony div{
+    display: flex;
+    align-items: center;
+    margin-block-end: 1.875rem;
+}
+.main__h2{
+    font-size: 1.125rem;
+    font-weight: 400;
+
+    display: flex;
+    flex-flow: column;
+}
+.main__h2 span{
+    color: hsl(333, 80%, 67%);
+    margin-block-start: .3rem;
+    font-weight:   300;
+}
+
+.main__testimony img{
+    display: block;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+
+    margin-inline-end: 1.5rem;
+}
+
+.main__testimony p{
+    font-size: 1.1rem;
+    line-height: 1.3;
+}
+
+@media screen and (min-width: 1024px) {
+    .main{
+        max-width: 1100px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .main__heading{
+
+        text-align: start;
+        max-width: 410px;
+        margin-block-end: 3.75rem;
+    }
+    .main__h1{
+        font-size: 3.375rem;
+        margin-block: 0 2.25rem;
+    }
+    .main__rating-container{
+        margin-block: 0;
+    }
+    .main__rating-container div{
+        display: flex;
+        align-items: center;
+    }
+    .main__rating-container div img{
+        margin-inline-end: 0.5rem;
+        width:17px ;
+        height:16px;
+    }
+    .main__rated{
+        margin-inline-start: 1.5rem;
+    }
+    .main__rating-container div:nth-child(2){
+        margin-inline-start: 3rem;
+    }
+    .main__rating-container div:nth-child(3){
+        margin-inline-start: 6rem;
+    }
+
+    .main__testimony-container{
+        grid-column: 1/3;
+
+        display: grid;
+        grid-auto-flow: column;
+    }
+    .main__testimony{
+        max-width: 350px;
+        max-height: fit-content;
+        margin-inline-end: 1.875rem;
+    }
+    .main__testimony:nth-child(2){
+        margin-block-start: 1.125rem;
+    }
+    .main__testimony:nth-child(3){
+        margin-block-start: 2.25rem;
+    }
+}
